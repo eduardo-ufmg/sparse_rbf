@@ -1,3 +1,5 @@
+import numbers
+
 import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
@@ -30,7 +32,7 @@ def sparse_multivarite_rbf_kernel(X: np.ndarray, Y: np.ndarray, h: float, k: int
     # --- 1. Input Validation ---
     if h <= 0:
         raise ValueError("Bandwidth parameter h must be positive.")
-    if not isinstance(k, int) or k <= 0:
+    if not isinstance(k, numbers.Integral) or k <= 0:
         raise ValueError("Number of neighbors k must be a positive integer.")
     
     n_samples_X, n_features_X = X.shape
