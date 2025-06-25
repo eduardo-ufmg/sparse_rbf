@@ -13,7 +13,7 @@ def sparse_multivarite_rbf_kernel(X: np.ndarray, Y: np.ndarray, h: float, k: int
 
     The RBF kernel is defined as: K(x, y) = exp(-||x - y||^2 / (2 * h^2)).
 
-    Args:
+    Parameters:
         X (np.ndarray): A 2D array of shape (n_samples_X, n_features).
             The first set of data points.
         Y (np.ndarray): A 2D array of shape (n_samples_Y, n_features).
